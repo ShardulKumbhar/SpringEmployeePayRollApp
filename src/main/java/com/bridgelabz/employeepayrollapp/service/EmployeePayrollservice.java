@@ -22,6 +22,11 @@ public class EmployeePayrollservice implements IEmployeePayrollService {
         return employeeRepository.save(employee);
     }
 
+    /**
+     * method to edit employee on roll
+     * @param employee
+     * @return
+     */
     @Override
     public Employee editEmp(Employee employee) {
         if (employeeRepository.findById(employee.getId()).isPresent()) {
@@ -31,6 +36,11 @@ public class EmployeePayrollservice implements IEmployeePayrollService {
     }
 
 
+    /**
+     * method to find employee by id
+     * @param id
+     * @return
+     */
     @Override
     public Employee findEmpById(Long id) {
         if (employeeRepository.findById(id).isPresent())
@@ -38,11 +48,20 @@ public class EmployeePayrollservice implements IEmployeePayrollService {
         return null;
     }
 
+    /**
+     * method to see all employee on payroll
+     * @return
+     */
     @Override
     public List<Employee> findAll() {
         return employeeRepository.findAll();
     }
 
+    /**
+     * method to delete employeee on payroll.
+     * @param id
+     * @return
+     */
     @Override
     public Employee deleteEmpById(Long id) {
         Employee employee = null;

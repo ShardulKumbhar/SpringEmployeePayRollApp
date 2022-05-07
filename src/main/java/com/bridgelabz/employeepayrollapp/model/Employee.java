@@ -10,7 +10,7 @@ import javax.persistence.*;
  *
  * @data-combination of getter and setters in lombok
  * @table-Create a table in my Sql
- *  @Entity-To create table with this entity column in sql(database)
+ *  @Entity-To create table with this entity column in sql(database);
  *
  */
 @Entity
